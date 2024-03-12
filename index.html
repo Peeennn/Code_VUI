@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="js/app1.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/trangchuController.js"></script>
+    <!-- <script src="js/TrangchuCtrller.js"></script>
+    <script src="js/themController.js"></script>
+    <script src="js/suaController.js"></script> -->
+  </head>
+  <body>
+    <div class="boxheart">
+        <div class="heart">
+          <h1 style="font-weight: bold; font-size: 30px">Bấm vào đây nè bé oiiii</h1>
+        </div>
+        <div class="beat"></div>
+      </div>
+      <div class="boxchoose">
+        <h2 style="font-weight: bold; font-size: 30px">
+          Em đồng ý làm người yêu anh nhaaaa!!
+        </h2>
+        <div class="listbutton">
+          <button id="no">Never</button>
+          <button id="yes">Em đồng ý</button>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="inner">
+          <h3>Anh thương em nhiều lắm</h3>
+          <img src="/NguyenThiOanh/image/anhcuatui.jpg" alt="" />
+          <p>Để anh chở em đi <span>ĂN KEM </span>NÀ NÀ NÀ</p>
+          <button
+            type="button"
+            class="btn btn-danger fw-bold"
+            style="font-size: 2rem"
+          >
+           <a href="Hello.html" style="text-decoration: none; color: aliceblue;">Bấm vào đây nữa</a> 
+          </button>
+        </div>
+      </div>      
+    <script>
+      const noBtn = document.querySelector("#no");
+      const yesBtn = document.querySelector("#yes");
+      let boxheart = document.querySelector(".boxheart");
+      let boxchoose = document.querySelector(".boxchoose");
+      let popup = document.querySelector(".popup");
+      boxheart.addEventListener("click", function () {
+        boxheart.classList.add("active");
+        boxchoose.classList.add("active");
+      });
+      yesBtn.addEventListener("click", function () {
+        popup.classList.add("active");
+      });
+      noBtn.addEventListener("mouseenter", () => {
+        const top = Math.floor(Math.random() * window.innerHeight);
+        const left = Math.floor(Math.random() * window.innerWidth);
+
+        noBtn.style.top = `${top}px`;
+        noBtn.style.left = `${left}px`;
+      });
+    </script>
+  </body>
+</html>
